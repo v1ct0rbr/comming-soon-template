@@ -1,5 +1,5 @@
-import './globals.css'
 import { Inter } from 'next/font/google'
+import './globals.css'
 import { ThemeProvider } from './theme-provider'
 
 import type { Metadata } from 'next'
@@ -38,7 +38,7 @@ export default function Layout({
       <body className={ `${inter.className} bg-gray-200	min-h-screen dark:bg-[#0d1117] `}
       >
         
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>          
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={true}>          
           <main className='main'>{children}</main>
         </ThemeProvider>     
         <script src={`https://embed.tawk.to/${tawktoWidgetId}/${tawkToId}`} async />     
