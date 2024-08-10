@@ -11,11 +11,11 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Comming Soon',
+  title: `Comming Soon - ` + process.env.title,
   icons: [
     {
      rel: 'icon',
-     url: '/favicon.ico', 
+     url: '/logo.ico', 
     },
   ],
   
@@ -33,7 +33,9 @@ export default function Layout({
 
   return (
     <html lang="en">
-     
+     <head>
+      <link rel="icon" href="/favicon.ico" />
+     </head>
       
       <body className={ `${inter.className} bg-gray-200	min-h-screen dark:bg-[#0d1117] `}
       >
@@ -41,7 +43,7 @@ export default function Layout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={true}>          
           <main className='main'>{children}</main>
         </ThemeProvider>     
-        <script src={`https://embed.tawk.to/${tawktoWidgetId}/${tawkToId}`} async />     
+        <script src={`https://embed.tawk.to/${tawkToId}/${tawktoWidgetId}`} async />     
       </body>
     </html>
   )
